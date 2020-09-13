@@ -1,10 +1,18 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Form from "./Form";
+import { MovieProvider } from "./MovieContext";
+import MovieList from "./MovieList";
+import Nav from "./Nav";
 
 function App() {
   return (
     <div className="App">
-     <h1>Hello My text editor app</h1>
+      <MovieProvider>
+        <MovieList />
+        <Nav />
+        <Form />
+      </MovieProvider>
     </div>
   );
 }
